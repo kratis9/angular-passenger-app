@@ -2,7 +2,7 @@
 </span>
 <div>
   <input type="text" [value]="detail.fullname"
-  (input)="onNameChange()"
+  (input)="onNameChange(name.value)"
   #name>
 </div>
 <div>{{ detail.fullname }}</div>

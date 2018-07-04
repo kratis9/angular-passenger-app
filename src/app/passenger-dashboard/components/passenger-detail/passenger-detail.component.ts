@@ -10,4 +10,7 @@ import { Passenger } from '../../models/passenger';
 export class PassengerDetailComponent {
   @Input()
   detail:Passenger;
+  onNameChange(value: string){
+console.log('value:', value);
+  }
 }
