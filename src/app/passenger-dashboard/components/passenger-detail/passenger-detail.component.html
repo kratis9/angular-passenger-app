@@ -1,6 +1,12 @@
 <span class="status" [class.checked-in]="detail.checkedIn">
 </span>
-{{ detail.fullname }}
+<div>
+  <input type="text" [value]="detail.fullname"
+  (input)="onNameChange()"
+  #name>
+</div>
+<div>{{ detail.fullname }}</div>
+
 <div class="date">
   Check in date: {{ detail.checkInDate ? (detail.checkInDate | date: 'yMMMMd' | uppercase) : 'Not checked in' }}
 </div>
