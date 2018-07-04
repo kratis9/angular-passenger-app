@@ -1,6 +1,6 @@
 <span class="status" [class.checked-in]="detail.checkedIn">
 </span>
-<div *ngIf="editing ">
+<div *ngIf="editing">
   <input type="text" [value]="detail.fullname" (input)="onNameChange(name.value)" #name>
 </div>
 <div *ngIf="!editing">
@@ -17,5 +17,5 @@
   {{ editing ? 'Done' : 'Edit'}}
 </button>
 <button (click)="onRemove()">
-  {{ remove ? 'Done' : 'remove'}}
+Remove
 </button>
