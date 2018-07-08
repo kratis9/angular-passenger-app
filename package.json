@@ -14,6 +14,7 @@
     "@angular/router": "6.0.7",
     "core-js": "2.5.5",
     "rxjs": "6.2.1",
+    "rxjs-compat": "^6.2.1",
     "zone.js": "0.8.26"
   },
   "version": "0.0.0",
@@ -21,6 +22,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
+    "server": "json-server --watch db.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
