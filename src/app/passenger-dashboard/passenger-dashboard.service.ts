@@ -8,9 +8,14 @@ import { ThrowStmt } from "../../../node_modules/@angular/compiler";
 @Injectable()
 export class PassengerDashboardService {
   PASSENGER_API: string = "http://localhost:3000/passengers";
+
   constructor(private http: HttpClient) {}
   getPassengers(): Observable<Passenger[]> {
     return this.http.get<Passenger[]>(this.PASSENGER_API);
+  }
+
+  getPassenger(id: number): Observable<Passenger> {
+    return this.http.get<Passenger>(`${this.PASSENGER_API}/${id}`);
   }
   updatePassengers(passenger: Passenger): Observable<Passenger> {
     return this.http.put<Passenger>(
